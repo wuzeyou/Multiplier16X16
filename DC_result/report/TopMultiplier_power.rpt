@@ -1,0 +1,44 @@
+Loading db file '/home/ycpan/ycpan/DC_work/smic13_tt.db'
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+Warning: Design has unannotated primary inputs. (PWR-414)
+ 
+****************************************
+Report : power
+        -analysis_effort low
+Design : TopMultiplier
+Version: Z-2007.03
+Date   : Wed Dec 19 19:42:49 2012
+****************************************
+
+
+Library(s) Used:
+
+    smic13_tt (File: /home/ycpan/ycpan/DC_work/smic13_tt.db)
+
+
+Operating Conditions: TYPICAL   Library: smic13_tt
+Wire Load Model Mode: top
+
+Design        Wire Load Model            Library
+------------------------------------------------
+TopMultiplier          reference_area_20000
+                                         smic13_tt
+
+
+Global Operating Voltage = 1.2  
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000pf
+    Time Units = 1ns
+    Dynamic Power Units = 1mW    (derived from V,C,T units)
+    Leakage Power Units = 1nW
+
+
+  Cell Internal Power  =  13.0844 mW   (41%)
+  Net Switching Power  =  19.0485 mW   (59%)
+                         ---------
+Total Dynamic Power    =  32.1328 mW  (100%)
+
+Cell Leakage Power     =   3.6027 uW
+
+1

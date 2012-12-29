@@ -1,0 +1,84 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : TopMultiplier
+Version: Z-2007.03
+Date   : Wed Dec 19 19:42:45 2012
+****************************************
+
+Operating Conditions: TYPICAL   Library: smic13_tt
+Wire Load Model Mode: top
+
+  Startpoint: x_in[4] (input port)
+  Endpoint: result_out[30]
+            (output port clocked by v_clk)
+  Path Group: v_clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  TopMultiplier      reference_area_20000  smic13_tt
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock (input port clock) (rise edge)     0.00       0.00
+  input external delay                     0.00       0.00 r
+  x_in[4] (in)                             0.00       0.00 r
+  U1846/Z (INVCLKHD40X)                    0.01       0.01 f
+  U3087/Z (AND4HD6X)                       0.11       0.12 f
+  U3622/Z (NAND2HD6X)                      0.07       0.19 r
+  U3653/Z (XOR2HD5X)                       0.12       0.30 r
+  U2010/Z (INVHD12X)                       0.05       0.35 f
+  U3425/Z (NAND2HD4X)                      0.06       0.41 r
+  U1939/Z (NAND2HD4X)                      0.04       0.45 f
+  U1643/Z (XNOR2HD3X)                      0.07       0.52 r
+  U1642/Z (XNOR2HD3X)                      0.09       0.61 r
+  U4727/Z (XNOR2HD3X)                      0.09       0.70 r
+  U3493/Z (XNOR2HD3X)                      0.09       0.79 r
+  U2140/Z (XNOR2HD3X)                      0.12       0.92 r
+  U2180/Z (NAND2B1HD4X)                    0.11       1.03 r
+  U3767/Z (NAND2HD6X)                      0.05       1.07 f
+  U2962/Z (XOR2HD5X)                       0.08       1.16 f
+  U3324/Z (XNOR2HD5X)                      0.10       1.26 f
+  U3063/Z (INVHD8X)                        0.05       1.31 r
+  U3601/Z (NAND2HD3X)                      0.06       1.36 f
+  U3770/Z (AOI21HD4X)                      0.08       1.44 r
+  U1764/Z (XOR2HD3X)                       0.10       1.54 r
+  U1766/Z (XNOR2HD4X)                      0.13       1.67 r
+  U2782/Z (NAND3HD3X)                      0.09       1.76 f
+  U3817/Z (NOR2B1HD4X)                     0.08       1.84 r
+  U3816/Z (OAI21HD4X)                      0.05       1.89 f
+  U3813/Z (AND2HD6X)                       0.09       1.98 f
+  U3179/Z (OAI21B2HD4X)                    0.09       2.07 r
+  U1776/Z (INVCLKHD6X)                     0.07       2.14 f
+  U1818/Z (OAI211HD5X)                     0.11       2.25 r
+  U1819/Z (INVHD8X)                        0.04       2.29 f
+  U2965/Z (MUXI2HD4X)                      0.10       2.39 f
+  U2336/Z (INVHD6X)                        0.04       2.43 r
+  U2971/Z (AND2HD6X)                       0.07       2.51 r
+  U3694/Z (NOR2B1HD4X)                     0.02       2.53 f
+  U2006/Z (AND2HD4X)                       0.08       2.61 f
+  U2395/Z (NAND3HD4X)                      0.05       2.66 r
+  U2406/Z (NAND3HD4X)                      0.05       2.71 f
+  U4615/Z (AOI31HD4X)                      0.09       2.80 r
+  U4003/Z (XNOR2HD3X)                      0.08       2.87 f
+  U2428/Z (INVHD4X)                        0.07       2.94 r
+  U3351/Z (BUFCLKHD40X)                    0.13       3.08 r
+  result_out[30] (out)                     0.01       3.08 r
+  data arrival time                                   3.08
+
+  clock v_clk (rise edge)                  3.28       3.28
+  clock network delay (ideal)              0.00       3.28
+  output external delay                   -0.20       3.08
+  data required time                                  3.08
+  -----------------------------------------------------------
+  data required time                                  3.08
+  data arrival time                                  -3.08
+  -----------------------------------------------------------
+  slack (VIOLATED: increase signficant digits)        0.00
+
+
+1

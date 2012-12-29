@@ -1,0 +1,42 @@
+#-------------------------------------------------------------------------------
+#
+#	Multiplier constraints for Synopsys Design Compiler
+#
+#	Author : PAN YU CHEN
+#
+#	2012/11/11	initial version
+#
+#-------------------------------------------------------------------------------
+# Preparation
+set_host_options -max_cores 8
+set lib_name smic13_tt
+current_design TopMultiplier
+reset_design
+#-------------------------------------------------------------------------------
+# Collections
+set all_inputs_except_clk \
+	[remove_from_collection [all_inputs] [get_ports clk]]
+#-------------------------------------------------------------------------------
+# Parameters
+#set my_max_load [expr [load_of $lib_name/BUFHD2X/Z] * 10]
+set my_max_load 0.5
+#-------------------------------------------------------------------------------
+# System clock
+create_clock -period 3.28 -name v_clk; # virtual clock
+#-------------------------------------------------------------------------------
+# Input constraints
+#set_driving_cell -library $lib_name -lib_cell BUFHD2X all_inputs_except_clk
+set_input_delay 0.2 -max -clock v_clk $all_inputs_except_clk
+set_max_capacitance $my_max_load $all_inputs_except_clk
+#-------------------------------------------------------------------------------
+# Output constraints
+set_output_delay 0.2 -max -clock v_clk [all_outputs]
+set_load [expr $my_max_load * 2] [all_outputs]
+#-------------------------------------------------------------------------------
+# Wire load model
+set_wire_load_mode top
+set_wire_load_model -name reference_area_20000
+#-------------------------------------------------------------------------------
+# Area
+set_max_area 0; # as small as possible
+#-------------------------------------------------------------------------------

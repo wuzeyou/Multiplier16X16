@@ -1,0 +1,58 @@
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : qor
+Design : TopMultiplier
+Version: Z-2007.03
+Date   : Wed Dec 19 19:42:45 2012
+****************************************
+
+
+  Timing Path Group 'v_clk'
+  -----------------------------------
+  Levels of Logic:              40.00
+  Critical Path Length:          3.08
+  Critical Path Slack:           0.00
+  Critical Path Clk Period:      3.28
+  Total Negative Slack:         -0.02
+  No. of Violating Paths:        4.00
+  No. of Hold Violations:        0.00
+  -----------------------------------
+
+
+  Cell Count
+  -----------------------------------
+  Hierarchial Cell Count:           0
+  Hierarchial Port Count:           0
+  Leaf Cell Count:               3260
+  -----------------------------------
+
+
+  Area
+  -----------------------------------
+  Combinational Area:    58718.527332
+  Noncombinational Area:     0.000000
+  Net Area:                  0.000000
+  -----------------------------------
+  Cell Area:             58718.527344
+  Design Area:           58718.527332
+
+
+  Design Rules
+  -----------------------------------
+  Total Number of Nets:          3292
+  Nets With Violations:             0
+  -----------------------------------
+
+
+  Hostname: SOC1
+
+  Compile CPU Statistics
+  -----------------------------------
+  Resource Sharing:              1.08
+  Logic Optimization:          117.90
+  Mapping Optimization:        291.51
+  -----------------------------------
+  Overall Compile Time:        417.07
+
+1
