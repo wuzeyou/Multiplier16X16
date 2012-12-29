@@ -1,0 +1,21 @@
+///////////////////////////////////////////////////////////////////////////////
+//
+//	Module Name:	Half-Adder
+//
+//	Date:	2012/12/15
+//
+//	Author:	Joe Wu
+//
+//	Description:	2-input & 2-output Adder
+//
+///////////////////////////////////////////////////////////////////////////////
+
+module HalfAdder(a, b, sum, cout);
+
+input a, b;
+output sum, cout;
+
+assign	sum = a ^ b;
+assign	cout = a & b;
+
+endmodule
